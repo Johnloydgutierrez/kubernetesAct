@@ -14,7 +14,7 @@ spec:
 apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
-  name: k8s-activity-yourname #change this 
+  name: k8s-activity-johnloyd #change this 
   labels: 
     app: nginx 
 spec: 
@@ -30,7 +30,7 @@ spec:
       initContainers: 
       - name: init-html 
         image: curlimages/curl 
-        command: ["sh", "-c", "curl -o /usr/share/nginx/html/index.html https://raw.githubusercontent.com/<your username>/<repository name>/<branch name>/index.html"] #change this 
+command: ["sh", "-c", "curl -o /usr/share/nginx/html/index.html https://raw.githubusercontent.com/Johnloydgutierrez/kubernetesAct/main/index.html"]
         volumeMounts: 
         - name: html-volume 
           mountPath: /usr/share/nginx/html 
